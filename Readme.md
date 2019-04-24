@@ -12,7 +12,7 @@ Description:
 Scene 1:	
 	*There are 3 studentprocesses and 1 teaher process. Students are supposed to do their assignments and they need 3 things for that- pen,paper and question paper. The teacher has an infinite supply of all the three things. One student has pen, another has paper and another has question paper. The teacher places two things on a shared table and the student having the third complementary thing makes the assignment and tells the teacher on completion. The teacher then places two things out of three and again the student having the third thing makes the assignment and tells the teacher on completion. This cycle continues. Write a program to synchronise the teacher and the students.*
 
-Sample Input:
+*Sample Input:*
 
 1
 
@@ -23,7 +23,7 @@ Sample Input:
 0
 
 
-Expected Output:
+*Expected Output:*
 
 ______Teacher places Pen and Paper on the shared table______
 ******3rd Student has the last item, he completes the task and reports to teacher******
@@ -38,13 +38,13 @@ ______Teacher places Pen and Question Paper on the shared table______
 
 Scene 1 at Exam Hall is complete
 
-Explanation:
+*Explanation:*
 		Initially the program assigns the students with the resources they have (i.e., pen or paper or question paper ) as stated by question. Then program prompts for the resources to be placed on shared table by the teacher, according to the user input the variables will be allocated to the student who can complete assignment and then the student acknowledges the teacher about his completion. Threads and mutex are used here to determine a continous and uninterupted flow.
 
 Scene 2:
 	 *Two types of people can enter into a library-students and teachers. After entering the library, the visitor searches for the required books and get them. In ordr to get them issued, he goes to the single CPU which is there to process the issuing of books. Two types of queues are there at the counter-one for students and one for teachers.A student goes and stands at the tail of the queue for students and simliarly the teacher goes and stands at the tail of the queue for teaches (FIFO).If a student is being served and a teacher arrives at the counter, he would be the next person to get service (PRIORITY - non preemtive). If two teachers arrive at the same time, they will stand in their queue to get service (FIFO). Write a program to ensure that the system works in a non-chaotic manner.*
 
-Sample Input:
+*Sample Input:*
 
 2
 
@@ -58,7 +58,7 @@ Sample Input:
 
 0
 
-Expected Output:
+*Expected Output:*
 
 Waiting time for 2 person is =0
 Waiting time for 3 person is =1
@@ -68,7 +68,7 @@ Waiting time for 1 person is =4
 
 Scene 2 at Library is complete
 
-Explanation:
+*Explanation:*
 
 The above problem can be solved by using multi level scheduling for both the teacher queue and the student queue. However starvation occurs when new teacher comes before the current student is addressed the student have to wait, if this continues then the student will have longer waiting time; However here I used a priority queue which demonstrates the same and is optimal as number of persons are less than 100 (practically).
 
@@ -77,7 +77,7 @@ Scene 3:
 	
  *If a teacher is being served and during the period when he is being served, another teacher comes, then that teacher would get the service next. This process might continue leading to increase in waiting time of students. Ensure in your program that the waiting time of students is minimized.*
 
-Sample Input:
+*Sample Input:*
 
 3
 
@@ -91,7 +91,7 @@ Sample Input:
 
 7
 
-Expected Output:
+*Expected Output:*
 
 Waiting time for 2 person is =0
 Waiting time for 3 person is =1
@@ -101,11 +101,11 @@ Waiting time for 5 person is =4
 
 Scene 3 at Library is complete
 
-Explanation:
+*Explanation:*
 
 Here the concept of ageing is implemented to solve the starvation that was seen in scene 2. Ageing is the process in which a process gets incremented to the higher priority level during the time of execution. There is always some criteria for a process to be incremented to higher priority level and over here I used the number of entries of teachers after a particular student arrival as my ageing constraint. It was to promote the student to higher priority if the student is left waiting till 3 teachers. This solution is what I belive as optimal and justifies the policy of library.
 
-code:
+*Code:*
 
 ```
 
