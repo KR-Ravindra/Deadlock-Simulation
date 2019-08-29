@@ -1,4 +1,4 @@
-# Hey! The following is a real world scenario where in a sheduling algorithm (Operating System level) to solve the problem.
+# Hey! The following is a real world scenario where in a sheduling algorithm (Operating System level)is used to solve the problem.
 
 Question:
 
